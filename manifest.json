@@ -1,0 +1,33 @@
+{
+  "name": "Boomerang Tab",
+  "description": "Reopens last closed tab for a specific window.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "sessions",
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/boomerang-tab-16.png",
+    "48": "icons/boomerang-tab-48.png",
+    "128": "icons/boomerang-tab-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/boomerang-tab-16.png",
+      "48": "icons/boomerang-tab-48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "reopen-window-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Reopen last closed tab for this window."
+    }
+  }
+}
